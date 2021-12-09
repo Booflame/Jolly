@@ -1,0 +1,43 @@
+@use "../util" as u;
+
+header {
+    min-height: 70px;
+    background-color: u.$black;
+    position: relative;
+    padding-block: 1rem;
+
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: u.$black;
+        z-index: 98;
+
+        @include u.mq(small){
+            position: static;
+        }
+    }
+
+    nav[data-visible="false"] {
+        display: none;
+
+        @include u.mq(small){
+            display: block;
+        }
+
+    }
+    nav[data-visible="true"] {
+        display: block;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: u.$primary-color;
+    }
+
+    .logo {
+        width: 200px;
+    }
+}

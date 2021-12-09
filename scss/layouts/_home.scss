@@ -1,0 +1,7 @@
+@use "../util" as u;
+
+.hero{
+    background-color: u.$primary-color;
+    min-height: 500px;
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+}

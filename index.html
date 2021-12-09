@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mit javascript bliver linket i head med defer så det loades i bagrunden mens den loader resten af siden -->
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Website title</title>
+</head>
+<body class="pancake">
+    <header>
+        <div class="wrapper flex flex-ai-fe flex-jc-sb">
+            <div class="logo">
+                <img src="assets/img/logo2.svg" alt="">
+            </div>
+            <button class="burger" aria-controls="navigation" aria-expanded="false">
+                <span class="inner-burger"></span>
+            </button>
+            <nav id="navigation" data-visible="false">
+                <ul role="list" class="flex-mobile flex-center gap-150" >
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+@use "../util" as u;
+
+.flex {
+    display: flex;
+
+    &-center {
+        justify-content: center;
+        align-items: center;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-fe {
+        justify-content: flex-end;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-ai-fe {
+        align-items: flex-end;
+    }
+    &c{
+        display: flex;
+        flex-direction: column;
+    }
+    &box{
+        display: flex;
+        flex: 1;
+    }
+    &-mobile{
+        display: flex;
+        flex-direction: column;
+
+        @include u.mq(small){
+            flex-direction: row;
+        }
+    }
+}
+.gap {
+    &-100 {
+        gap: 1rem;
+    }
+    &-150 {
+        gap: 1.5rem;
+    }
+    &-200 {
+        gap: 2rem;
+    }
+}
+.ps {
+    &-rel {
+        position: relative;
+    }
+    &-abs {
+        position: absolute;
+    }
+}
