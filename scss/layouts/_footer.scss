@@ -28,7 +28,7 @@ footer {
     svg{
       width: 50px;
       fill: u.$primary-color;
-      transition-property: fill transform;
+      transition-property: fill, transform;
       transition-timing-function: ease-in-out;
       transition-duration: 150ms;
     }

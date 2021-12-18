@@ -85,7 +85,6 @@ main{
         button{
             cursor: pointer;
             border: 4px solid u.$black;
-            // box-shadow: 0 0 0 4px u.$black;
             padding-block: 1rem;
             // transform: rotate(-5deg) skew(-5deg, 0);
 
@@ -94,7 +93,6 @@ main{
             &:focus-visible{
                 background: u.$black;
                 color: u.$white;
-                // box-shadow: 0 0 0 4px u.$white;
                 border: 4px solid u.$white;
 
             }

@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <!-- Mit javascript bliver linket i head med defer så det loades i bagrunden mens den loader resten af siden -->
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style_v3.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- SEO og title for websitet -->
     <title>Jolly Cola samarbejde med Astralis</title>
     <meta name="description" content="Jolly Cola har skabt et samarbejde med Astralis for at skabe en dansk sodavand til de danske gamer">
@@ -24,7 +24,7 @@
         <div class="wrapper flex flex-ai-fe flex-jc-sb">
             <!-- bruger aria-label for at vise screenreaders at mit logo linker til index -->
             <a href="#" class="logo" aria-label="index">
-                <img src="assets/img/logo.svg" alt="Logo" width="150px" height="131.5px">
+                <img src="assets/img/logo.svg" alt="Logo" width="150" height="131">
             </a>
             <!-- Min burgermenu knap har tre aria attributer der hjælper screenreaders til at forstå den.
                 aria-controls viser hvad knapper kontrollere når man trykker på den, og aria-expanded er om menuen er vist eller ej -->
@@ -37,6 +37,7 @@
                 <ul role="list" class="flex-mobile flex-center gap-150" >
                     <li><a class="link" href="#about">Om Astralis</a></li>
                     <li><a class="link" href="#contest">konkurrence</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -56,8 +57,8 @@
                         </p>
                     </div>
                     <div class="flex flex-jc-c can-container">
-                        <img src="assets/img/Jolly_cola_can.webp" alt="Jolly cola dåse" class="jolly-can-img" width="200px" height="309px">
-                        <img src="assets/img/Jolly_time_can.webp" alt="Jolly time dåse" class="jolly-can-img" width="200px" height="309px">
+                        <img src="assets/img/Jolly_cola_can.webp" alt="Jolly cola dåse" class="jolly-can-img" width="200" height="309">
+                        <img src="assets/img/Jolly_time_can.webp" alt="Jolly time dåse" class="jolly-can-img" width="200" height="309">
                     </div>
                 </div>
             </div>
@@ -95,11 +96,11 @@
                 <form action="test.html" method="get" class="flexc gap-150">
                     <div class="flexc gap-50">
                         <label for="email">Email</label>
-                        <input type="email" placeholder="Din email" required>
+                        <input id="email" type="email" placeholder="Din email" required>
                     </div>
                     <div class="flexc gap-100">
                         <label for="code">Kodeord</label>
-                        <input type="text" placeholder="Din kode til konkurrence" required>
+                        <input id="code" type="text" placeholder="Din kode til konkurrence" required>
                     </div>
                         
                     <!-- <input type="submit" value="Tilmeld konkurrence"> -->
