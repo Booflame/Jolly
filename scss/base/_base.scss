@@ -1,6 +1,24 @@
+@use "../util" as u;
+
+::selection{
+    background: u.$primary-color;
+    color: u.$white;
+}
+
+.red-bg{
+    background-color: u.$primary-color;
+    color: u.$white;
+
+    ::selection{
+        background: u.$white;
+        color: u.$black;
+    }
+}
+
 html{
     font-size: 100%;
     overflow-x: hidden;
+    font-family: 'Bebas Neue', cursive;
 }
 .pancake{
     display: grid;
@@ -9,4 +27,29 @@ html{
 .wrapper{
     width: 90%;
     margin-inline: auto;
+
+    @include u.mq(small){
+        width: 80%;
+    }
+
+    @include u.mq(large){
+        width: 70%;
+    }
+}
+.edge::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    clip-path: polygon(0 -1%, 100% -1%, 100% 0, 0 100%);
+    margin-bottom: 40px;
+}
+.primary.edge::before{
+    background-color: u.$primary-color;
+}
+.white.edge::before{
+    background-color: u.$white;
+}
+.black.edge::before{
+    background-color: u.$black;
 }

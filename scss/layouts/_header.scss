@@ -3,8 +3,26 @@
 header {
     min-height: 70px;
     background-color: u.$black;
-    position: relative;
-    padding-block: 1rem;
+    padding-block: 2rem 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 8;
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -50px;
+        width: 100%;
+        height: 50px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+        z-index: 9999;
+        background-color: u.$black;
+    }
+
+    .logo {
+        width: 150px;
+    }
 
     nav{
         position: absolute;
@@ -12,7 +30,24 @@ header {
         left: 0;
         right: 0;
         background-color: u.$black;
-        z-index: 98;
+        z-index: 999999;
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            height: 50px;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+            z-index: 9999;
+            background-color: u.$black;
+
+            @include u.mq(small){
+                
+                all: unset;
+            }
+        }
 
         @include u.mq(small){
             position: static;
@@ -31,13 +66,42 @@ header {
         display: block;
     }
 
-    a {
+    .link{
+        display: inline-block;
         text-decoration: none;
         font-size: 2rem;
         color: u.$primary-color;
-    }
+        position: relative;
+        overflow: hidden;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: ease-in-out;
 
-    .logo {
-        width: 200px;
+        &:hover, 
+        &:focus,
+        &:focus-visible{
+            @include u.mq(small){
+                color: u.$white;
+            }
+            &::after{
+                @include u.mq(small){
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: u.$primary-color;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            transform: translateY(5px);  
+            transition-property: transform;
+            transition-duration: 250ms;
+            transition-timing-function: ease-in-out;
+        }
     }
 }

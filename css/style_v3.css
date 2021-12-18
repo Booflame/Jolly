@@ -130,6 +130,9 @@ html:focus-within {
   }
 }
 
+.gap-50 {
+  gap: 0.5rem;
+}
 .gap-100 {
   gap: 1rem;
 }
@@ -194,9 +197,9 @@ html {
   display: block;
   width: 100%;
   height: 50px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
-  margin-bottom: 20px;
+  -webkit-clip-path: polygon(0 -1%, 100% -1%, 100% 0, 0 100%);
+          clip-path: polygon(0 -1%, 100% -1%, 100% 0, 0 100%);
+  margin-bottom: 40px;
 }
 
 .primary.edge::before {
@@ -394,78 +397,84 @@ footer .socials svg {
   transition-duration: 150ms;
 }
 
-section .wrapper {
-  min-height: 500px;
+main section {
+  scroll-margin-top: 170px;
+  padding-bottom: 30px;
 }
-section:first-of-type {
-  padding-top: 60px;
+main section:first-of-type {
+  padding-top: 80px;
 }
-
-h1 {
+main h1 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 3rem;
   letter-spacing: 0.1rem;
 }
-
-.cola-img {
+main h2 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+main p {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.6rem;
+  width: clamp(20ch, 48ch, 100%);
+}
+main .cola-img {
   width: 120px;
 }
-
-.jolly-can-img {
+main .jolly-can-img {
   width: 150px;
 }
 @media only screen and (min-width: 28em) {
-  .jolly-can-img {
+  main .jolly-can-img {
     width: 200px;
   }
 }
-
-.intro-text {
-  font-size: 1.6rem;
-  font-family: "Kanit", sans-serif;
-  min-width: 50%;
-  padding-inline: 0.4em;
+main .intro-text {
+  width: 100%;
 }
 @media only screen and (min-width: 28em) {
-  .intro-text {
+  main .intro-text {
     order: 3;
   }
 }
-.intro-text p {
-  width: clamp(100%, 35ch, 100%);
+main .can-container {
+  width: 100%;
 }
-
-.can-container {
-  min-width: 50%;
-}
-
-.astralis-text {
+main .astralis-text {
   position: relative;
 }
-.astralis-text::before {
+main .astralis-text::before {
   content: "";
   position: absolute;
-  width: 60px;
-  aspect-ratio: 6/7;
-  left: 0;
-  top: -60px;
+  width: 220px;
+  aspect-ratio: 15/18;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-image: url("../assets/img/astralis.png");
   background-size: cover;
   z-index: 5;
+  opacity: 0.4;
 }
-.astralis-text p {
-  margin-left: 60px;
-}
-
-form {
+main form {
   font-size: 1.6rem;
   line-height: 1em;
 }
-form label {
+main form label {
   font-size: 1.6rem;
 }
-form input[type=submit] {
+main form button {
+  cursor: pointer;
+  border: 4px solid #282424;
+  padding-block: 1rem;
+}
+main form button:hover, main form button:focus, main form button:focus-visible {
+  background: #282424;
+  color: white;
+  border: 4px solid white;
+}
+main form input[type=submit] {
   cursor: pointer;
   border: none;
   box-shadow: 0 0 0 4px white;
@@ -474,7 +483,7 @@ form input[type=submit] {
   border-radius: 5rem;
   padding-block: 1.1rem 1rem;
 }
-form input[type=submit]:hover, form input[type=submit]:focus, form input[type=submit]:focus-visible {
+main form input[type=submit]:hover, main form input[type=submit]:focus, main form input[type=submit]:focus-visible {
   background: white;
   color: #f5323c;
 }

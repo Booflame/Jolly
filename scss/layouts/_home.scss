@@ -1,7 +1,123 @@
 @use "../util" as u;
 
-.hero{
-    background-color: u.$primary-color;
-    min-height: 500px;
-    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+main{
+
+    section{
+
+        scroll-margin-top: 170px;
+        padding-bottom: 30px;
+
+        &:first-of-type{
+            padding-top: 80px;
+        }
+    }
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    h2{
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    p{
+        font-family: 'Kanit', sans-serif;
+        font-size: 1.6rem;
+        width: clamp(20ch, 48ch, 100%);
+    }
+
+    .cola-img{
+        width: 120px;
+    }
+    .jolly-can-img{
+        width: 150px;
+
+        @include u.mq(small){
+            width: 200px;
+        }
+    }
+
+    .intro-text{
+        
+        width: 100%;
+
+        @include u.mq(small){
+            order: 3;
+        }
+
+    }
+    .can-container{
+        width: 100%
+    }
+
+
+    .astralis-text{
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 220px;
+            aspect-ratio: 15/18;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("../assets/img/astralis.png");
+            background-size: cover;
+            z-index: 5;
+            opacity: .4;
+        }
+
+    }
+
+    form{
+        font-size: 1.6rem;
+        line-height: 1em;
+
+        label{
+            font-size: 1.6rem;
+        }
+
+        button{
+            cursor: pointer;
+            border: 4px solid u.$black;
+            // box-shadow: 0 0 0 4px u.$black;
+            padding-block: 1rem;
+            // transform: rotate(-5deg) skew(-5deg, 0);
+
+            &:hover,
+            &:focus,
+            &:focus-visible{
+                background: u.$black;
+                color: u.$white;
+                // box-shadow: 0 0 0 4px u.$white;
+                border: 4px solid u.$white;
+
+            }
+        }
+
+        input[type="submit"]{
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 0 4px u.$white;
+            color: u.$white;
+            background: u.$primary-color;
+            border-radius: 5rem;
+            padding-block: 1.1rem 1rem;
+
+            
+
+            &:hover,
+            &:focus,
+            &:focus-visible{
+                background: u.$white;
+                color: u.$primary-color;
+            }
+
+        }
+    }
 }

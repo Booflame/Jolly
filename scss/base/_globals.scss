@@ -40,6 +40,9 @@
     }
 }
 .gap {
+    &-50{
+        gap: 0.5rem;
+    }
     &-100 {
         gap: 1rem;
     }
@@ -48,13 +51,5 @@
     }
     &-200 {
         gap: 2rem;
-    }
-}
-.ps {
-    &-rel {
-        position: relative;
-    }
-    &-abs {
-        position: absolute;
     }
 }
