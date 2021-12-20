@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+<!-- min side er dansk derfor er lang sat til da -->
 <html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- theme-color er den farve mobil header bruger-->
+    <meta name="theme-color"  content="#282424">
     <!-- Favicon for forskellige størrelser og til safari -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -13,14 +16,17 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- SEO og title for websitet -->
     <title>Jolly Cola samarbejde med Astralis</title>
+    <!-- description meta tag er beskrivelsen af mit site, men ville kunne se hvis man linker sitet eller fandt det i en søgemaskine -->
     <meta name="description" content="Jolly Cola har skabt et samarbejde med Astralis for at skabe en dansk sodavand til de danske gamer">
+    <!-- keywords som skulle hjælpe mit site komme frem når man søger på de forskellige ord -->
     <meta name="keywords" content="Jolly, Cola, Jolly cola, Astralis, gamer, CS, Counterstrike, CS:GO, Esport">
-    <meta name="theme-color"  content="#282424">
+    <!-- robots sætter jeg til ikke at kunne finde siden -->
+    <meta name="robots" content="noindex,nofollow">
 </head>
 <!-- Min pancake class sætter header, main og footer op som stak pandekager, så footer altid er i bunden -->
 <body class="pancake">
     <header>
-        <!-- bruger wrapper inde i header så jeg har min bagrundsfarve helt ud til kanten -->
+        <!-- bruger wrapper inde i header så jeg har min bagrundsfarve helt ud til kanten af skærmen -->
         <div class="wrapper flex flex-ai-fe flex-jc-sb">
             <!-- bruger aria-label for at vise screenreaders at mit logo linker til index -->
             <a href="#" class="logo" aria-label="index">
@@ -43,9 +49,11 @@
     </header>
     <main>
         <section class="red-bg">
+            <!-- wrapper inde i section så farven går helt ud til skærmen -->
             <div class="wrapper">
                 <h1>Sig Astralis til din Jolly</h1>
                 <div class="flex-mobile flex-center gap-200">
+                    <!-- gruppere min tekst i en div jeg kalder intro-text -->
                     <div class="intro-text flexc gap-100">
                         <p>
                             Her hos Jolly, har vi teamet op med Astralis og designet en ny lækker dåse.
@@ -53,9 +61,10 @@
                             hvor du kan se Astralis kæmpe om sejren mod de bedste Counter Strike hold i verdenen.
                         </p>
                         <p>
-                            Så vis din støtte til Astralis med den nye Jolly, find dem hvor du køber din sodavand.
+                            Så vis din støtte til Astralis med den nye Jolly, find dem hvor du køber din Jolly sodavand.
                         </p>
                     </div>
+                    <!-- gruppere mine billider i en div jeg kalder can-container -->
                     <div class="flex flex-jc-c can-container">
                         <img src="assets/img/Jolly_cola_can.webp" alt="Jolly cola dåse" class="jolly-can-img" width="200" height="309">
                         <img src="assets/img/Jolly_time_can.webp" alt="Jolly time dåse" class="jolly-can-img" width="200" height="309">
@@ -63,14 +72,15 @@
                 </div>
             </div>
         </section>
+        <!-- bruger edge og primary til mit skæve look på siden, edge er selve tingen og primary fordi den tidligere sektion bruger den farve -->
         <section id="about" class="primary edge">
             <div class="wrapper flex flex-center">
                 <div class="astralis-text flexc flex-center gap-100">
                     <h2>Om Astralis</h2>
                     <p>
                         Astralis er et dansk professionelt dansk Counter Strike hold grundlagt tilbage i 2016.
-                        De har vundet flere store turninger bl.a. ELEAGUE Major, der svarer til en slags Champions league turnering i Counter Strike.
-                        De har i alt vundet 4 major turneringer og er et af de mest vindende Counter Strik hold i verdenen. 
+                        De har vundet flere store turneringer bl.a. ELEAGUE Major, der svarer til en slags Champions league turnering i Counter Strike.
+                        De har i alt vundet 4 major turneringer og er et af de Counter Strike hold med flest sejrer under bæltet i verdenen. 
                     </p>
                     <p>
                         Du kan sikre dig en plads på første række til den næste store turnering Astralis skal spille; nemlig Blast Premier World Final, der foregår i København.
@@ -81,46 +91,57 @@
                 </div>
             </div>
         </section>
+        <!-- white bliver brugt her fordi den tidligere sektion er hvid -->
         <section id="contest" class="red-bg edge white">
             <div class="wrapper flexc flex-center gap-150">
+                <!-- div til at gruppere min tekst -->
                 <div class="flexc flex-center gap-100">
                     <h2>Tilmeld dig konkurrence her</h2>
                     <p>
-                        Tilmeld dig konkurrencen her. Du skal bruge den 6-cifrede kodeord, der er under dåsen.
+                        Du skal bruge det 6-cifrede kode, som du kan finde under dåsen.
+                    </p>
+                    <p>
                         Du kan deltage lige så mange gange som du vil.
                     </p>
                     <p>
-                        Vi trækker en heldig vinder af de 2 billeder d. 31/12-21 og vinderen får direkte besked. 
+                        Vi trækker en heldig vinder af de 2 billetter d. 31/12-21 og vinderen får direkte besked. 
                     </p>
                 </div>
-                <form action="test.html" method="get" class="flexc gap-150">
+                <!-- bruger en form element for deltagelse i min konkurrence. Den sender ikke dataen videre så den er ikke funktionelt -->
+                <form action="#" method="get" class="flexc gap-150">
                     <div class="flexc gap-50">
+                        <!-- "for" attributen fortæller hvilket input mit label er knyttet til -->
                         <label for="email">Email</label>
+                        <!-- id er navnet mit label skal bruge, type er email fordi jeg vil have brugeren til bruge en email, det hjælper med html validering af min form hvis den var funktionel-->
                         <input id="email" type="email" placeholder="Din email" required>
                     </div>
-                    <div class="flexc gap-100">
+                    <div class="flexc gap-50">
                         <label for="code">Kodeord</label>
+                        <!-- Placeholder er teksten der er inde i mit input inden brugeren skriver, jeg har required på input så man ikke kan submit formen uden at udfylde relevant i forhold til type -->
                         <input id="code" type="text" placeholder="Din kode til konkurrence" required>
                     </div>
-                        
-                    <!-- <input type="submit" value="Tilmeld konkurrence"> -->
-                    <button type="submit" >Tilmeld konkurrence</button>
+                    <!-- bruger en button med type submit til sende min form afsted, hvis alt i formen er valid-->
+                    <button type="submit">Tilmeld konkurrence</button>
                 </form>
             </div>
         </section>
     </main>
     <footer class="edge primary">
         <div class="wrapper flex-mobile flex-jc-c gap-200">
+            <!-- socials er min container for sociale links og dens overskrift-->
             <div class="socials">
                 <h2>Følg Jolly her</h2>
                 <div class="flex flex-jc-c gap-100">
-                    <a href="https://www.facebook.com/JollyCola/?ref=page_internal" target="_blank" rel="noreferrer">
+                    <!-- bruger, target="_blank" for at åbne mine a links i en ny fane og bruger af den grund også rel="noopener noreferrer" for at
+                        beskytte mine brugere fra at der skulle være noget farligt javascript fra det nye site de går til-->
+                    <a href="https://www.facebook.com/JollyCola/?ref=page_internal" target="_blank" rel="noopener noreferrer">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <!-- titlen bliver brugt når man hover over til at fortælle brugeren hvad der figuren illustrere -->
                             <title>Facebook</title>
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/jollycolaoriginal/" target="_blank" rel="noreferrer">
+                    <a href="https://www.instagram.com/jollycolaoriginal/" target="_blank" rel="noopener noreferrer">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>Instagram</title>
                             <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
@@ -131,25 +152,25 @@
             <div class="socials">
                 <h2>Følg Astralis her</h2>
                 <div class="flex flex-jc-c gap-100">
-                    <a href="https://www.facebook.com/astralisgg" target="_blank" rel="noreferrer">
+                    <a href="https://www.facebook.com/astralisgg" target="_blank" rel="noopener noreferrer">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>Facebook</title>
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/astralis/" target="_blank" rel="noreferrer">
+                    <a href="https://www.instagram.com/astralis/" target="_blank" rel="noopener noreferrer">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>Instagram</title>
                             <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
                         </svg>
                     </a>
-                    <a href="https://twitter.com/astralisgg" target="_blank" rel="noreferrer">
+                    <a href="https://twitter.com/astralisgg" target="_blank" rel="noopener noreferrer">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>Twitter</title>
                             <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                         </svg>
                     </a>
-                    <a href="https://www.twitch.tv/team/astralis" target="_blank" rel="noreferrer">
+                    <a href="https://www.twitch.tv/team/astralis" target="_blank" rel="noopener noreferrer">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>Twitch</title>
                             <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>

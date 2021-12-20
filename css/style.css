@@ -275,9 +275,7 @@ header {
   min-height: 70px;
   background-color: #282424;
   padding-block: 2rem 0.5rem;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 8;
 }
 header::after {
@@ -301,6 +299,7 @@ header nav {
   left: 0;
   right: 0;
   background-color: #282424;
+  padding-top: 20px;
   z-index: 999999;
 }
 header nav::after {
@@ -379,7 +378,6 @@ footer {
   color: #f5323c;
 }
 footer h2 {
-  letter-spacing: 0.1ch;
   font-size: 2rem;
   text-align: center;
   -webkit-margin-after: 1rem;
@@ -398,7 +396,6 @@ footer .socials svg {
 }
 
 main section {
-  scroll-margin-top: 170px;
   padding-bottom: 30px;
 }
 main section:first-of-type {
@@ -406,9 +403,13 @@ main section:first-of-type {
 }
 main h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
-  letter-spacing: 0.1rem;
+}
+@media only screen and (min-width: 28em) {
+  main h1 {
+    font-size: 3rem;
+  }
 }
 main h2 {
   text-align: center;
@@ -417,7 +418,7 @@ main h2 {
 main p {
   font-family: "Kanit", sans-serif;
   font-size: 1.6rem;
-  width: clamp(20ch, 48ch, 100%);
+  width: clamp(18ch, 48ch, 100%);
 }
 main .cola-img {
   width: 120px;
@@ -433,11 +434,6 @@ main .jolly-can-img {
 main .intro-text {
   width: 100%;
 }
-@media only screen and (min-width: 28em) {
-  main .intro-text {
-    order: 3;
-  }
-}
 main .can-container {
   width: 100%;
 }
@@ -447,15 +443,20 @@ main .astralis-text {
 main .astralis-text::before {
   content: "";
   position: absolute;
-  width: 220px;
+  width: 300px;
   aspect-ratio: 15/18;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("../assets/img/astralis.png");
+  background-image: url("../assets/img/astralis.svg");
   background-size: cover;
-  z-index: 5;
+  z-index: -1;
   opacity: 0.4;
+}
+@media only screen and (min-width: 28em) {
+  main .astralis-text::before {
+    width: 220px;
+  }
 }
 main form {
   font-size: 1.6rem;
@@ -468,22 +469,14 @@ main form button {
   cursor: pointer;
   border: 4px solid #282424;
   padding-block: 1rem;
+  background: white;
+  color: #282424;
+  transition-property: border, color, background;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 main form button:hover, main form button:focus, main form button:focus-visible {
   background: #282424;
   color: white;
   border: 4px solid white;
-}
-main form input[type=submit] {
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 0 0 4px white;
-  color: white;
-  background: #f5323c;
-  border-radius: 5rem;
-  padding-block: 1.1rem 1rem;
-}
-main form input[type=submit]:hover, main form input[type=submit]:focus, main form input[type=submit]:focus-visible {
-  background: white;
-  color: #f5323c;
 }
